@@ -15,4 +15,4 @@ La principal limitación de localStorage es que sólo podemos almacenar pares de
 IFCD0210
 3
 Por ello si deseamos almacenar diversos datos para cada identificador deberemos realizar nosotros la gestión de la cadena contenedora de los datos.
-Por desgracia, las implementaciones actuales solo admiten asignaciones de cadena a cadena, así que hay que serializar y deserializar otras estructuras de datos. Este procedimiento se puede realizar con ** JSON.stringify() ** y ** JSON.parse(). **
+Por desgracia, las implementaciones actuales solo admiten asignaciones de cadena a cadena, así que hay que serializar y deserializar otras estructuras de datos. Este procedimiento se puede realizar con **JSON.stringify()** y **JSON.parse()**.
