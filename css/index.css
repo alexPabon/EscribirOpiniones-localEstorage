@@ -1,0 +1,286 @@
+:root
+{
+	--Color_de_borde:#6495ed9c;
+	--Color_de_fondo:#afaff426;
+}
+
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;	
+	margin: 0;
+	padding: 100px;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	text-align: center;	
+}
+
+fieldset
+{
+
+	border-color: blue;
+	background-color: white;	
+	margin-bottom: 100px;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 1px -1px 13px 2px #8b7be0cf;
+}
+
+h2
+{
+	font-size: 2.2vw;
+	text-align: left;
+}
+
+h1
+{
+	text-align: center;
+	font-size: 4.4vw;
+	color: #dfecf9;	
+}
+
+p.text_info
+{
+	margin: 0;
+	padding-top: 2px;
+	padding-right: 15px;
+	color: black;
+	font-size: 1vw;	
+}
+
+p#comentario, p#error_login
+{
+	text-align: left;
+}
+
+hr
+{
+	margin-top: 3px;
+    margin-bottom: 25px;
+}
+
+ul
+{
+	
+}
+
+li{
+	display: inline-block;
+	text-align: right;
+	vertical-align: text-top;
+}
+
+li.saltoLinea{
+	display: none;	
+}
+
+li.sgdoSaltoLinea{
+	
+	background-color: red;
+	width: 100%;
+	margin-top: 30px;	
+}
+
+li.btnLista{
+	width: 100%;
+	margin-top: 10px;
+}
+
+div#ini_ses form fieldset{
+	max-width: 300px;	
+}
+
+div#ini_ses form fieldset ul
+{
+	padding: 0;
+	margin: 0;	
+	list-style-type: none;
+	text-align: justify;	
+}
+
+div#reg_us form fieldset ul{
+	padding: 0;
+	margin: 0;
+	min-width: 400px;
+	list-style-type: none;
+	text-align: justify;
+}
+
+div#reg_us
+{
+	display: none;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+div.bloquesEntradas{
+	display: block;
+}
+
+label.login_info{
+	display: block;
+	text-align: left;
+}
+
+label.login_info, p#err_pass
+{
+	visibility: hidden;
+}
+
+fieldset div
+{
+	display: inline-flex;
+}
+
+fieldset label
+{
+	font-size: 1.3vw;
+}
+
+fieldset input[class=info0]
+{
+	margin-bottom: 20px;
+	font-size: 1.5vw;
+	padding: .8vh;
+	border-radius: 7px;
+	outline: none;
+	border-color: var(--Color_de_borde);;
+}
+
+fieldset input[class=info]
+{
+	margin-top: 20px;
+	font-size: 1.5vw;
+	padding: .8vh;
+	border-radius: 7px;
+	outline: none;
+	border-color: var(--Color_de_borde);;
+}
+
+fieldset input[class=botones]
+{
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 1.5vw;
+	padding: .5vh 1vw;
+	border-radius: 7px;
+	outline: none;
+}
+
+select
+{
+	margin-top: 20px;
+	font-size: 1.1vw;
+	padding: .8vh;
+	border-radius: 7px;
+	outline: none;
+	border-color: var(--Color_de_borde);;	
+}
+
+input[class="botones"]:hover{
+	background-color: black;	
+	color:white;
+}
+
+fieldset input[class=info]:focus
+{
+	background-color: var(--Color_de_fondo);
+}
+
+fieldset input[class=info0]:focus
+{
+	background-color: var(--Color_de_fondo);
+}
+
+/* =========================== Media Queries ======================================*/
+
+@media all and (max-width: 1024px)
+{
+	label.lblInfo{display: block; text-align: left; margin-top: 20px; font-size: 18px;}
+
+	fieldset input[class=info0]{font-size: 2.5vw;}
+
+	fieldset input[class=info]{font-size: 2.5vw; margin: 0; width: 100%;}
+
+	fieldset input[class=botones]{font-size: 2.5vw;}
+
+	select{font-size: 2.1vw; margin: 0;}
+
+	div.slFechaNaci{text-align: left;}
+
+	fieldset label{font-size: 2.3vw;}
+
+	p.text_info{font-size: 2vw;}
+
+	h2{font-size: 3.2vw;}	
+}
+
+@media screen and (max-width: 780px)
+{
+	fieldset input[class=info0]{font-size: 2.5vw;}
+
+	fieldset input[class=info]{font-size: 2.5vw;}
+
+	fieldset input[class=botones]{font-size: 2.5vw;}
+
+	select{font-size: 2.1vw;}
+
+	fieldset label{font-size: 2vw;}
+
+	li.saltoLinea{display: block; margin: 25px auto;}
+
+	h2{font-size: 3.2vw;}	
+}
+
+@media all and (max-width: 715px)
+{
+	body{padding: 20px;}
+
+	fieldset input[class=info0]{font-size: 3.5vw; width: 100%;}
+
+	fieldset input[class=info]{font-size: 3.5vw; width: 100%;}
+
+	fieldset input[class=botones]{font-size: 3.5vw;}
+
+	li{width: 100%;}
+
+	select{font-size: 3.1vw;}
+
+	fieldset {min-width: 320px;}
+
+	fieldset#entrada{min-width: 200px;}
+ 
+	fieldset label{font-size: 3.6vw;}	
+
+	h2{font-size: 4.2vw;}
+
+	h1{font-size: 5.4vw;}
+}
+
+@media all and (max-width: 300px)
+{
+	fieldset input[class=info0]{font-size: 4.5vw;}
+
+	fieldset input[class=info]{font-size: 4.5vw;}
+
+	fieldset input[class=botones]{font-size: 4.5vw;}
+
+	select{font-size: 4.1vw;}
+
+	fieldset label{font-size: 4.3vw;}
+
+	p.text_info{font-size: 4vw;}
+
+	h2{font-size: 5.2vw;}
+
+	h1{font-size: 5.4vw;}
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio sesion</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index_datos.js"></script>
+</head>
+<body onload="cargar_info()" style="background-image: url(imagenes/foto.jpg);">
+	<div class="caja" id="ini_ses">
+		<h1>Danos tu opinion sobre Barcelona</h1>
+		<form>
+			<fieldset id="entrada">
+				<h2>Login <hr></h2>
+				<ul>					
+					<li>
+						<label id="user0" class="login_info" for="user">Usuario</label>
+						<input type="text" placeholder="Usuario" name="user" id="user" class="info0" onfocus="visibilidad(1)" onblur="visibilidad(2)">
+					</li>					
+					<li>
+						<label id="pass" class="login_info" for="pass0">Contraseña</label>
+						<input type="password" placeholder="Contraseña" name="pass0" id="pass0" class="info0" onfocus="visibilidad(3)" onblur="visibilidad(4)">
+					</li>
+					<li class="btnLista">
+						<input type="button" name="reg" id="reg" class="botones" value="Registrar" onclick="cambiar('reg_us')">
+						<input type="button" name="entrar" id="entrar" class="botones" value="Entrar" onclick="login()">
+					</li>
+				</ul>
+				<p id="error_login"></p>
+			</fieldset>
+		</form>		
+	</div>
+
+	<div class="caja" id="reg_us">
+		<form id="formulario1">
+			<fieldset>
+				<h2>Registrarse <hr></h2>
+				<ul>					
+					<li>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="nomb">Nombre: </label>
+							<input type="text" name="nomb" id="nomb" class="info" onkeyup="validar_car(0)">
+						</div>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="apell">Apellido: </label>
+							<input type="text" name="apell" id="apell" class="info" onkeyup="validar_car(1)">
+						</div>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="alias">Nombre de usuario: </label>
+							<input type="text" name="alias" id="alias" class="info" onkeyup="validar_car(2)">
+						</div>						
+					</li>
+					<li class="saltoLinea">						
+					</li>																		
+					<li>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="pass1">Contraseña: </label>
+							<input type="password" name="pass1" id="pass1" class="info" onkeyup="validar_car(3)">
+							<p class="text_info">La contraseña, minimo 6 caracteres</p>
+						</div>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="r_pass">Repetir Contraseña: </label>
+							<input type="password" name="r_pass" id="r_pass" class="info" onkeyup="validar_car(4)">
+							<p class="text_info" id="err_pass">No coicide la contraseña introducida</p>
+						</div>
+					</li>					
+					<li class="sgdoSaltoLinea"></li>
+					<li>
+						<div class="bloquesEntradas eespacioArriba">
+							<label class="lblInfo" for="direcc">Direccion: </label>
+							<input type="text" name="direcc" id="direcc" class="info" onkeyup="validar_car(5)">	
+						</div>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="apell">Telefono: </label>
+							<input type="text" name="tel" placeholder="667025555" maxlength="13" id="tel" class="info" onkeyup="validar_car(6)">
+						</div>						
+					</li>
+					<li>
+						<div class="bloquesEntradas">
+							<label class="lblInfo" for="correo">E-mail: </label>
+							<input type="email" name="correo" id="correo" class="info" onkeyup="validar_car(7)">
+						</div>
+						<div class="bloquesEntradas slFechaNaci">
+							<label class="lblInfo" for="D_sele">Fecha de nacimiento: </label>
+							<select id="D_sele" class="fechaNacimiento"></select>
+							<select id="M_sele" class="fechaNacimiento"></select>
+							<select id="Y_sele" class="fechaNacimiento"></select>
+						</div>
+					</li>				
+					<li class="btnLista">
+						<input type="button" name="reg" id="reg" class="botones" value="Registrar" onclick="validate()">
+						<input type="reset" name="borrar" id="borrar" class="botones" value="Borrar Datos">
+						<input type="button" name="cancelar" id="cancelar" class="botones" value="Cancelar" onclick="cambiar('ini_ses')">
+					</li>								
+				</ul>								
+				<p id="comentario"></p>		
+			</fieldset>
+		</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>criticas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/criticas.css">
+	<script type="text/javascript" src="js/criticas.js"></script>
+</head>
+<body onload="carga_pg(), carga_info()">
+
+	<header>
+		<p id="cliente"></p>
+		<p id = "n_usuario"></p>
+		<p><span id="cerrar_ses" onclick="cerrarSesion()">Cerrar Sesion</span></p>
+		
+	</header>
+
+	<main>		
+		<h2>Opiniones de Barcelona<hr></h2>
+		<h3>Seleccione un lugar.</h3>
+		<div>
+			<select id="sele_lugar"></select>
+		</div>
+		<div>
+			<textarea id="mensaje"></textarea>
+		</div>
+		<div>
+			<input type="button" value="Añadir comentario" onclick="insert_post()">
+			<input type="button" id="borrar" value="Borrar ultimo de la lista" onclick="borraUltimoLis()">
+			<input type="button" value="leer Opiniones" onclick="cargarPosts()">		
+			<p id="error"></p>
+		</div>			
+	</main>
+
+	<section>
+		<div id="descripcion">
+			<div>
+				<ul id="lug">
+					<li class="tblTitulo">Lugar</li>				
+				</ul>			
+				<ul id="desc">
+					<li class="tblTitulo">Opinion</li>		
+				</ul>
+			</div>
+		</div>
+		<div id="muro"></div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,174 @@
+*{
+	box-sizing: border-box;
+}
+
+body{	
+	margin:0;	
+	height: 100vh;
+	background-color: #fafaf7;
+}
+
+header{
+	border: solid 2px gray;
+	background-color: #4c5d1b;
+	border-radius: 0 0 1vw 1vw;
+	min-width: 350px;
+	width: 100%;
+	padding:15px 30px;
+	margin-bottom: 4vh;
+	text-align: right;
+}
+
+header p#n_usuario, header p#cliente{
+	color:white;
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+main{
+	width: 90%;
+	max-width:500px;
+	min-width: 350px;		
+	margin: 15px auto;
+	padding: 20px;
+	border:solid 2px green;
+	border-radius: 10px;
+	background-color: #e7ece2;
+}
+
+div select{
+	font-size: 1.2vw;
+	margin-bottom: 15px;
+	padding: 5px;
+}
+
+div textarea{
+	width: 100%;
+	height: 100px;
+	resize:none;
+}
+
+section div#descripcion div{
+	width: 90%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+ul{
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+li{
+	text-align: left;
+	border: solid 1px black;
+	padding: 3px;
+}
+
+li:nth-of-type(even){	
+	background-color: #e7ece2;
+}
+
+li.tblTitulo{
+    background-color: #4c5c1a;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 4px 4px 0 0;
+}
+
+div#muro>div.post{
+	background-color: #e7ece2;
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+section div#descripcion{
+	width: 60%;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: left;
+	display: none;	
+}
+
+section div#muro{
+	background-color: white;
+	max-width: 1080px;
+	width: 90%;
+	min-width: 350px;
+	margin: 0 auto;
+	box-shadow: 0 0 11px 3px lightslategrey;
+	border-radius: 4px;
+	padding: 20px;
+	text-align: left;
+	display: none;
+}
+
+input[type="button"]{
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 1.2vw;
+	padding: .5vh 1vw;
+	border-radius: 7px;
+	outline: none;
+}
+
+input[type="button"]:hover{
+	background-color: black;	
+	color:white;
+}
+
+div.post p{	
+	background-color: white;
+    margin-bottom: 2vh;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 1.2vh;
+}
+
+div.header_post>span.nick_post{
+	font-weight: bold;
+    padding: 0 25px;
+}
+
+div.header_post>span.date_post{
+	font-style: italic;
+	font-size: 12px;
+}
+
+span#cerrar_ses{
+	color: yellow;
+	font-size: 20px;
+	border:solid 2px white;
+	border-radius: 5px;
+	padding: 0 10px;
+	background-color: #0a4009;
+}
+
+span#cerrar_ses:hover{
+	background-color: black;
+	color: yellow;
+	border-color: black;
+	cursor: pointer;
+}
+
+@media all and (max-width: 1024px)
+{	
+	div select, input[type="button"]{
+		font-size: 15px;
+		margin-left: 5px;
+		margin-top: 7px;
+		border-radius: 4px;	
+	}
+}
